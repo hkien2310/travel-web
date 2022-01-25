@@ -1,0 +1,105 @@
+@use "../abstract" as *;
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+  // margin: 4rem 1rem;
+  &_logo {
+      @include position(absolute, 0, 0, null, null, null, null);
+      z-index: 1;
+  }
+  @include responsive(large) {
+    max-width: 100%;
+    padding: 0 5rem;
+  }
+  @include responsive(medium) {
+    max-width: 100%;
+    padding: 0 4rem;
+  }
+  @include responsive(small) {
+    max-width: 100%;
+    padding: 0 3rem;
+  }
+  @include responsive(xsmall) {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+.group {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  &_control {
+    @include control(
+        $sliverLight-45,
+        5rem,
+        0 1.5rem
+      ) 
+  }
+  &_textarea {
+    @include control(
+        $sliverLight-45,
+        10rem,
+        1.5rem 1.5rem,
+        );
+        &::placeholder {
+            font-family: sans-serif;
+            font-size: 1.2rem
+        }
+  }
+}
+::placeholder {
+  color: $darktheme;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    color: $darktheme;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+.p15 {
+  padding: 1.5rem;
+}
+.mr-minus-15 {
+  margin-right: -1.5rem;
+}
+.ml-minus-15 {
+  margin-left: -1.5rem;
+}
+
+.mb-55 {
+  margin-bottom: 5.5rem !important;
+}
+
+.heading {
+  // margin-left: 3rem;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  background: linear-gradient(to right, $btnMainColor1, $btnMainColor2);
+  background-clip: text;
+  color: transparent;
+  transform: rotate(-2deg) !important;
+  text-transform: capitalize;
+  @include responsive(small) {
+    font-size: 1.6rem;
+  }
+}
+
+.animation {
+  transform: translateY(-10rem) scale(0);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.animate {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+

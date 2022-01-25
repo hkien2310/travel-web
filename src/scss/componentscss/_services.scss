@@ -1,0 +1,71 @@
+@use "../abstract/index" as *;
+.services {
+    margin: 8rem 0;
+    background: $sliverLight-40;
+    padding: 13rem 0;
+    transform: skewY(-5deg);
+    &_content {
+        transform: skewY(5deg);
+        &_container {
+            @include align(flex, null, center, null);
+        }
+    }
+    &_left {
+        &_heading {
+            font-size: 2.7rem;
+            font-weight: 900;
+            line-height: 3.5rem;
+            background: linear-gradient(35deg, $black 40%, $btnMainColor1 40%);
+            color: transparent;
+            background-clip: text;
+            text-transform: capitalize;
+        }
+        &_paragraph {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+    &_list {
+        margin-bottom: .5rem;
+        &_heading {
+            background: $white;
+            font-size: 1.3rem;
+            font-weight: 400;
+            cursor: pointer;
+            padding: 1rem;
+            @include align(flex, null, center, null);
+            text-transform: capitalize;
+            &_active {
+                color: #ff4d58;
+            }
+        }
+        &_detail {
+            max-height: 0;
+            overflow: hidden;
+            font-size: 1rem;
+            padding: 0 3rem;
+            line-height: 2rem;
+            &_show {
+                max-height: 10rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                transition: max-height .8s linear;
+                animation: detailAnimation  0.8s ease-in;
+                @keyframes detailAnimation {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-1rem);
+                    } to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+        &_down {
+            transform: rotate(90deg);
+            transition: transform .8s ease-in-out;
+        }
+    }
+}

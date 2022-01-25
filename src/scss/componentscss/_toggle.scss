@@ -1,0 +1,59 @@
+@use "../abstract" as *;
+.toggle_open {
+// @mixin position($position, $top, $left, $bottom, $right, $width, $height) {
+
+    @include position(fixed, 1rem, null, null, 1rem, null, null);
+    cursor: pointer;
+    z-index: 2;
+    padding: 1rem;
+    span:nth-child(1) {
+        @include toggle($btnMainColor2, 4rem, 0.3rem, 0);
+    }
+    span:nth-child(2) {
+        @include toggle($btnMainColor2, 4rem, 0.3rem, 0.3rem); 
+    }
+    span:nth-child(3) {
+        @include toggle($btnMainColor2, 4rem, 0.3rem, 0.3rem);
+    }
+    @include responsive(small) {
+        span {
+            width: 2rem !important;
+        }
+
+    }
+}
+.toggle_close {
+    @include position(fixed, 1rem, null, null, 1rem, null, null);
+    cursor: pointer;
+    z-index: 2;
+    padding: 1rem;
+    @include responsive(small) {
+        span {
+            width: 2rem !important;
+        }
+    }
+    @include responsive(large) {
+        right: 3rem;
+    }
+    @include responsive(large) {
+        right: 2.5rem;
+    }
+    @include responsive(large) {
+        right: 2rem;
+    }
+    @include responsive(large) {
+        right: 1.5rem;
+    }
+    span:nth-child(1) {
+        @include toggle($btnMainColor2, 3rem, .3rem, null);
+        transform: rotate(-45deg) translateY(5px) translateX(-10px);
+    }
+    span:nth-child(2) {
+        display: none;
+    }
+    span:nth-child(3) { 
+        @include toggle($btnMainColor2, 3rem, .3rem, null);
+        transform: rotate(45deg) translateY(5px) translateX(2px);
+    }
+
+}

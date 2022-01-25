@@ -1,0 +1,23 @@
+@use "../abstract/index" as *;
+.destinationsInfo {
+    margin: 10rem 0;
+    &_p {
+        margin-bottom: 4rem;
+        font-size: .95rem;
+        color: $sliverDark;
+        line-height: 2.8rem;
+    }
+    &_details {
+        @include align(flex, space-between, center, null);
+        padding: 0.5rem 0;
+        border: 1px dotted $sliverLight-50;
+        &_head {
+            font-size: 1.4rem;
+            color: $sliverDark
+        }
+        &_text {
+            font-size: 1.4rem;
+            color: $sliverDark
+        }
+    }
+}

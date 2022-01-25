@@ -1,0 +1,18 @@
+@use "./index" as *;
+.btn_default {
+    @include button($btnMainColor1, $btnMainColor2, $white, none, 4.5rem, inline-block, 
+    4.5rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 2rem )
+}
+
+.btn_dark {
+    @include button($darktheme, $btnMainColor2, $white, none, 4rem, inline-block, 
+    4rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 1.5rem )
+}
+.btn_dark_buy {
+    @include button($darktheme, $black, $white, none, 3rem, inline-block, 
+    3rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 2rem )
+}
+.btn_light {
+    @include button($white, $white, $black, none, 3rem, inline-block, 
+    3rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 1rem )
+}

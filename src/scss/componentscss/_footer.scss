@@ -1,0 +1,75 @@
+@use "../abstract/index" as *;
+.footer {
+    width: 100%;
+    min-height: 40rem;
+    padding: 8rem 0;
+    &_container {
+        width: 100%;
+        &_block {
+            background: $white;
+            padding: 2rem;
+        }
+    }
+    &_intro {
+        &_image {
+            width: 12rem;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                @include responsive(xsmall) {
+                    width: 75%;
+                }
+            }
+        }
+        &_msg {
+            margin-top: 2rem;
+            font-size: 1rem;
+            color: $sliverLight-50;
+            width: 80%;
+            font-weight: 400;
+            line-height: 2rem;
+            @include responsive(xsmall) {
+                width: 100%;
+            }
+        }
+    }
+    &_heading {
+        color:  $black;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1.5rem;
+    }
+    &_ul {
+        list-style-type: none;
+        &_li {
+            display: flex;
+            align-items: center;
+            color: $sliver;
+            a {
+                text-decoration: none;
+                color: $sliver;
+                display: block;
+                padding: 0.5rem 0;
+                font-size: 1rem;
+                text-transform: capitalize;
+                margin-left: 0.5rem;
+                
+            }
+        }
+    }
+    &_bottom {
+        width: 100%;
+        background: linear-gradient(to right, $btnMainColor1, $btnMainColor2);
+        color: $white;
+        height: 5rem;
+        align-items: center;
+        text-align: center;
+        @include align(flex, center, center, null);
+        p {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+    }
+}

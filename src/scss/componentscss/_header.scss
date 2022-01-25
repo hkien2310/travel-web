@@ -1,0 +1,89 @@
+@use "../abstract";
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+
+    &_logo {
+        @include abstract.position(absolute, 2rem, 2rem, null, null, null, null);
+        z-index: 1;
+        cursor: pointer;
+        img {
+            width: 10rem;
+            opacity: 0.75;
+        }
+        @include abstract.responsive(small) {
+            width: 12rem;
+        }
+        @include abstract.responsive(xsmall) {
+            width: 10rem;
+        }
+    }
+    &_video{
+        @include abstract.position(absolute, 0, 0, null, 0, 100%, 100%);
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+            animation: headerImage 0.5s linear;
+            @keyframes headerImage {
+                from {
+                    opacity: 0;
+                } to {
+                    opacity: 1;
+                }
+            }
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &_contents {
+        @include abstract.position(absolute, 0, 0, null, 0, 100%, 100%);
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+        
+        &_text {
+            @include abstract.align(flex, center, center, 100vh);
+            &_child {
+                margin: 0 1rem;
+            }
+            &_child_h1 {
+                margin-top: 1rem;
+                color: abstract.$white;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size:3rem;
+                line-height: 3rem;
+                @include abstract.animation(titleHeader, 1s, ease-in, -10rem, 0);
+                @include abstract.responsive(medium) {
+                    font-size: 4rem;
+                }
+                @include abstract.responsive(small) {
+                    font-size: 3rem;
+                }
+                @include abstract.responsive(xsmall) {
+                    font-size: 2rem;
+                }
+            }
+            &_child_p {
+                margin-top: 1rem;
+                margin-top: 0.7rem;
+                color: abstract.$white;
+                font-weight: 400;
+                font-size: 1.5rem;
+                @include abstract.animation(description, 0.8s, ease-out, 8rem, 0);
+
+            }
+            &_child_link {
+                margin-top: 1rem;
+                @include abstract.animation(child, 1s, ease-out, 10rem, 0);
+            }
+        }
+    }
+}

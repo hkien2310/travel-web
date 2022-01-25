@@ -1,0 +1,108 @@
+@use "../abstract/index" as *;
+.cities {
+  margin: 5rem 0;
+  background: $sliverLight-40;
+  padding: 13rem 0;
+  transform: skewY(-5deg);
+  &_container {
+    transform: skewY(5deg);
+  }
+  &_body {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 1rem;
+    &_image {
+      width: 100%;
+      height: 20rem;
+      overflow: hidden;
+      border-radius: 1rem;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s linear;
+        image-rendering: pixelated;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .bestselling {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status(
+          $orange,
+          0.6rem 1.3rem,
+          0.6rem,
+          $white,
+          1.3rem,
+          capitalize
+        );
+      }
+      .new {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status(
+          $green,
+          0.6rem 1.3rem,
+          0.6rem,
+          $white,
+          1.3rem,
+          capitalize
+        );
+      }
+      .hot {
+        @include position(absolute, 1rem, 1rem, null, null, null, null);
+        @include status(
+          $btnMainColor2,
+          0.6rem 1.3rem,
+          0.6rem,
+          $white,
+          1.3rem,
+          capitalize
+        );
+      }
+    }
+    &_content {
+      margin: 1.5rem 0 1.5rem 0;
+      &_top {
+        @include align(flex, space-between, center, null);
+        &_name {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+        &_duration {
+          @include align(flex, null, center, null);
+          &_time {
+            margin-left: 0.6rem;
+            font-size: 1rem;
+            font-weight: 500;
+          }
+        }
+      }
+      &_price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        &_dollor {
+          font-weight: 900;
+          font-size: 2rem;
+        }
+      }
+      &_roomandfood {
+        margin-top: 0.5rem;
+        &_content {
+          @include align(flex, space-between, center, null);
+
+          &_name {
+            text-transform: capitalize;
+          }
+        }
+        &_button {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
