@@ -16,10 +16,10 @@ const Footer = () => {
         <div className="container animation">
           <div className="footer_container_block">
             <div className="row">
-              <div className="col-6 p15">
+              <div className="col-6 p15 animation">
                 <FooterIntro />
               </div>
-              <div className="col-6 p15">
+              <div className="col-6 p15 animation">
                 <FooterLinks />
               </div>
             </div>

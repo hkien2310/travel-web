@@ -98,7 +98,7 @@
 
 @mixin responsive($breakpoint) {
   @if $breakpoint == large {
-    @media (max-width: $lg) {
+    @media (min-width: $lg) {
       @content;
     }
   };

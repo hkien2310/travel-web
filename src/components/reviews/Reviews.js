@@ -6,9 +6,9 @@ const Reviews = () => {
     const [heading] = useState("What our customers are saying?")
     console.log("your data:", reviewsData)
     return (
-        <div className="reviews animation">
+        <div className="reviews">
             <div className="container">
-                <h2 className="heading">
+                <h2 className="heading animation">
                     {heading}
                 </h2>
                 <div className="row mr-minus-15 ml-minus-15">

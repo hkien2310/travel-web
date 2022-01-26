@@ -2,12 +2,13 @@
 .destinations {
     margin: 8rem 1rem;
     &_heading{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         color: $black;
         font-weight: 600;
         width: 80%;
         line-height: 4rem;
         position: relative;
+        text-transform: uppercase;
         @include responsive(medium) {
             width: 100%;
             text-transform: uppercase;
@@ -27,10 +28,11 @@
         }
     }
     &_paragraph {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 2.5rem;
         color: $sliverparagraph;
         font-weight: 400;
+        text-align: justify;
     }
     &_card {
         width: 100%;

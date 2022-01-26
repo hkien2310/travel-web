@@ -13,7 +13,7 @@ const Services = () => {
         <div className="services">
             <div className="services_content">
                 <div className="container">
-                    <div className="row ml-minus-15 mr-minus-15 services_content_container">
+                    <div className="row services_content_container">
                         <div className="col-6 p15 animation">
                         <ServicesLeft heading={state.heading} subHeading={state.subHeading}/>
                         </div>

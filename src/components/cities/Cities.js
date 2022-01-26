@@ -7,13 +7,13 @@ const Cities = ({ cities, name }) => {
       <div className="cities">
         <div className="container">
           <div className="cities_container">
-            <h2 className="heading">City in {name}</h2>
-            <div className="row animation">
+            <h2 className="heading animation">City in {name}</h2>
+            <div className="row">
               {cities.length > 0
                 ? cities.map((city) => {
                     return (
                       <div className="col-3 p15 " key={city.id}>
-                        <div className="cities_body">
+                        <div className="cities_body animation">
                           <CitiesImage city={city} />
                           <CitiesContent city={city} />
                         </div>

@@ -32,8 +32,11 @@
             @keyframes headerImage {
                 from {
                     opacity: 0;
+                    transform: translateY(-2rem);
                 } to {
                     opacity: 1;
+                    transform: translateY(0);
+
                 }
             }
         }
@@ -60,7 +63,7 @@
                 font-weight: 900;
                 font-size:3rem;
                 line-height: 3rem;
-                @include abstract.animation(titleHeader, 1s, ease-in, -10rem, 0);
+                @include abstract.animation(titleHeader, 0.5s, ease-in, -10rem, 0);
                 @include abstract.responsive(medium) {
                     font-size: 4rem;
                 }

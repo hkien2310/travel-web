@@ -5,7 +5,9 @@ const ShowFooterLink = ({ links, external }) => {
   return links.map((link) => (
     <ul className="footer_ul" key={link.id}>
       <li className="footer_ul_li">
-        <BsChevronRight size={20} />
+        <span>
+          <BsChevronRight size={20} />
+        </span>
         {external ? (
           <>
             <a href={link.route} target="_blank" rel="noreferrer">
@@ -14,7 +16,7 @@ const ShowFooterLink = ({ links, external }) => {
           </>
         ) : (
           <>
-            <Link to={link.route ? link.route : `details/${link.id}`}>
+            <Link to={link.route ? link.route : `/details/${link.id}`}>
               {link.name}
             </Link>
           </>

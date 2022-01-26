@@ -5,28 +5,42 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+  @include responsive(medium) {
+    justify-content: space-evenly;
+  }
+  @include responsive(small) {
+    margin: 0;
+  }
 }
 @for $i from 1 through 12 {
   .col-#{$i} {
     max-width: 100% / 12 * $i;
     width: 100%;
-    @if $i == 6 {
-      @include responsive(small) {
+    @if $i == 8 {
+      @include responsive(medium) {
         max-width: 100%;
-        width: auto;
+        text-align: justify;
+      }
+    }
+    @if $i == 6 {
+      @include responsive(medium) {
+        max-width: 100%;
+        width: 100%;
+        padding: 1.5rem 0;
       }
     }
     @if $i == 4 {
       @include responsive(medium) {
-        max-width: 50%;
+        max-width: 75%;
         width: 100%;
+        
       }
       @include responsive(small) {
         max-width: 100%;
         width: 100%;
       }
-      @include responsive(small) {
+      @include responsive(xsmall) {
+        max-width: 100%;
         padding: 1rem 0;
       }
     }

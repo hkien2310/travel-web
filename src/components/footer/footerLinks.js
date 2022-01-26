@@ -28,17 +28,23 @@ const FooterLinks = () => {
   const { pages, partners, headings } = state;
   return (
     <div className="row">
-      <div className="col-4 p15">
-        <h3 className="footer_heading">{headings.pages}</h3>
-        <ShowFooterLink links={pages} />
+      <div className="footer_col-4">
+        <div className="col-4 p15">
+          <h3 className="footer_heading">{headings.pages}</h3>
+          <ShowFooterLink links={pages} />
+        </div>
       </div>
-      <div className="col-4 p15">
-        <h3 className="footer_heading">{headings.partners}</h3>
-        <ShowFooterLink links={partners} external/>
+      <div className="footer_col-4">
+        <div className="col-4 p15">
+          <h3 className="footer_heading">{headings.partners}</h3>
+          <ShowFooterLink links={partners} external />
+        </div>
       </div>
-      <div className="col-4 p15">
-        <h3 className="footer_heading">{headings.destinations}</h3>
-        <ShowFooterLink links={destinations} />
+      <div className="footer_col-4">
+        <div className="col-4 p15">
+          <h3 className="footer_heading">{headings.destinations}</h3>
+          <ShowFooterLink links={destinations} />
+        </div>
       </div>
     </div>
   );

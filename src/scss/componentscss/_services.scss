@@ -7,7 +7,7 @@
     &_content {
         transform: skewY(5deg);
         &_container {
-            @include align(flex, null, center, null);
+            @include align(flex, null, flex-start, null);
         }
     }
     &_left {
@@ -24,6 +24,7 @@
             margin-top: 3rem;
             font-size: 1.2rem;
             line-height: 2rem;
+            text-align: justify;
         }
     }
     &_list {
@@ -46,12 +47,16 @@
             font-size: 1rem;
             padding: 0 3rem;
             line-height: 2rem;
+            
             &_show {
                 max-height: 10rem;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
                 transition: max-height .8s linear;
                 animation: detailAnimation  0.8s ease-in;
+                @include responsive(medium) {
+                    max-height: 15rem;
+                }
                 @keyframes detailAnimation {
                     from {
                         opacity: 0;

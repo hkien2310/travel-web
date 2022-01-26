@@ -6,7 +6,8 @@
 
 .btn_dark {
     @include button($darktheme, $btnMainColor2, $white, none, 4rem, inline-block, 
-    4rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 1.5rem )
+    4rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 1.5rem );
+    text-align: center;
 }
 .btn_dark_buy {
     @include button($darktheme, $black, $white, none, 3rem, inline-block, 
@@ -15,4 +16,20 @@
 .btn_light {
     @include button($white, $white, $black, none, 3rem, inline-block, 
     3rem, 1.4rem, 400, 0.2rem, none, none, pointer, uppercase, 0 1rem )
+}
+@include responsive(medium) {
+    .btn{
+        &_dark{
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        &_dark_buy{
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        &_light{
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+    }
 }

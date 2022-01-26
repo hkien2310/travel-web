@@ -9,7 +9,7 @@ const PageContainer = ({ data, children }) => {
       <div className="page">
         <div className="container">
           <div className="row">
-            <div className="col-6">
+            <div className="col-6  page_left">
               {children}
             </div>
             <div className="col-6">
@@ -18,7 +18,7 @@ const PageContainer = ({ data, children }) => {
                 <h1 className="page_info_heading animation">{data.pageHeading}</h1>
                 <p className="page_info_msg animation">{data.message}</p>
                 <div className="page_info_link animation">
-                  <Link to="/" className="btn_dark animation">Back to Home</Link>
+                  <Link to="/" className="btn_dark animationm group_control">Back to Home</Link>
                 </div>
               </div>
             </div>
